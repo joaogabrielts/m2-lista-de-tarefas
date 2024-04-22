@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body{
+     font-family: "Roboto", sans-serif;
+     height: 100%;
+     width: 100%;
+     background-color:#e2e2e2 ;
+     overflow: hidden;
+}
+
+header{
+    width: 100vw;
+    margin-bottom: 10px;
+    background-color: white;
+    
+}
+.header__content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+     
+}
+.header__title{
+    color: #3b5bdb;
+    font-weight:bolder ;
+
+}
+.header__input--search{
+   background-color:#ebebeb;
+   padding-left: 10px;
+   padding-top: 10px;
+   border-radius: 5px;
+   padding-bottom: 10px;
+   width: 30%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border: none;
+}
+
+.main__container{
+ 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.form__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+   border-radius: 5px;
+}
+.form__title{
+width: 86%;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.form__input-container{
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+}
+
+
+.form__input--text{
+    background-color: #ebebeb;
+    border: none;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 10px 10px;
+    border-radius: 3px;
+}
+.form__input--priority{
+    background-color:#e2e2e2 ; 
+    border: none;
+    width: 30%;
+    padding: 10px 10px ;
+    border-radius: 3px;
+}
+
+.form__button--add-task{
+    width: 87%;
+    background-color:  #3b5bdb ;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.tasks__container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+   border-radius: 5px;
+}
+
+section h2{
+    width: 88%;
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+.tasks__list{
+    width: 80%;
+}
+
+.task__item{
+    background-color: #f1f3f5;
+    box-sizing: border-box;
+   padding: 20px 20px ;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px; 
+    border-radius: 5px;
+}
+.task-info__container{
+    width: 100%;
+    display: flex;
+}
+.span-urgent{
+    display:inline-block ;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: #ff0000;
+    border-radius: 50%;
+}
+
+.span-important{
+    display:inline-block ;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background-color:#f3a703;
+    border-radius: 50%;
+}
+
+.span-normal{
+    display:inline-block ;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background-color:#028302;
+    border-radius: 50%;
+}
+
+.task__button--remove-task{
+    background-image: url('../m2-lista-de-tarefas/assets/trash-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+/*
+fonte
+
+'Roboto'
+
+cor primária (tom do azul)
+
+#3b5bdb
+
+cor de fundo da parte principal (tom do cinza)
+
+#e2e2e2
+
+cor de fundo dos inputs (tom do cinza)
+
+
+
+cor de fundo dos itens de tarefa (tom do cinza)
+
+#f1f3f5
+
+cor do span 'urgente' (tom do vermelho)
+
+#e40404
+
+cor do span 'normal' (tom do verde)
+
+#028302
+
+cor do span 'importante' (tom do amarelo)
+
+#f3a703
+
+*/
