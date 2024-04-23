@@ -26,7 +26,7 @@ function renderElements(arry){
     const task = arry[i]
   
     const taskItem = createTaskItem(arry[i].title, arry[i].type)
-    console.log(taskItem);
+    
     
    ul.appendChild(taskItem);
     
@@ -50,12 +50,12 @@ function createTaskItem(title,type){
    li.classList.add('task__item');
    div.classList.add('task-info__container')
    p.innerText = title
-   console.log(title);
-  if(type === 'Urgente'){
+   
+  if(type.toLowerCase() === 'Urgente'.toLowerCase()){
      span.classList.add("span-urgent")
-   } else if(type === "Importante"){
+   } else if(type.toLowerCase() === "Importante".toLowerCase()){
      span.classList.add("span-important")
-   } else if(type === "Normal"){
+   } else if(type.toLowerCase() === "Normal".toLowerCase()){
      span.classList.add("span-normal")
    }
    button.classList.add("task__button--remove-task")
@@ -67,41 +67,35 @@ function createTaskItem(title,type){
    return li
  }
  
- console.log(createTaskItem());
+ 
+const buttonInput = document.getElementsByClassName("form__button--add-task")[0]
+const inputForm = document.getElementById("input_title")
+const selectForm = document.getElementsByClassName("form__input--priority input__box")[0]
+//console.log(inputForm);
 
+buttonInput.addEventListener('click',function(event){
+ event.preventDefault()
+ const novaTarefa = {title:inputForm.value, type:selectForm.value}
+ tasks.push(novaTarefa)
 
-
-/*
-
-function createTaskItem(tasks){
-
-  const li = document.createElement('li')
-  const div = document.createElement('div')
-  const span = document.createElement('span')
-  const p = document.createElement('p')
-  const button = document.createElement('button')
-
-  li.classList.add("task__item")
-  div.classList.add("task-info__container")
-  p.innerText = tasks.title
-
-  if(tasks.type === 'Urgente'){
-     span.classList.add("span-urgent")
-  } else if(tasks.type === "Importante"){
-    span.classList.add("span-important")
-  } else if(tasks.type === "Normal"){
-    span.classList.add("span-normal")
-  }
- button.classList.add('task__button--remove-task')
+renderElements(tasks)
+})
 
  
-  div.appendChild(span)
-  div.appendChild(p)
-  li.appendChild(div) 
-  li.appendChild(button)
-  console.log(li); 
- }
-createTaskItem(tasks) */
+
+console.log(tasks);
+/*const tasks = [
+  {title: "Comprar comida para o gato", type: "Urgente"},
+  {title: "Consertar Computador", type: "Importante"},
+  {title: "Beber água", type: "Normal"},
+  {title: "Enviar relatório trimestral", type: "Importante"},
+  {title: "Fazer exercícios físicos", type: "Normal"},
+  {title: "Agendar consulta médica", type: "Urgente"},
+  {title: "Ler pelo menos um capítulo de um livro", type: "Normal"},
+  {title: "Limpar a despensa", type: "Importante"},
+  {title: "Pagar a conta de energia", type: "Urgente"},
+  {title: "Assistir a um documentário interessante", type: "Normal"},
+];*/
 
 
 
