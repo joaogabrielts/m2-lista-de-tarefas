@@ -76,7 +76,7 @@ const selectForm = document.getElementsByClassName("form__input--priority input_
 buttonInput.addEventListener('click',function(event){
  event.preventDefault()
  const novaTarefa = {title:inputForm.value, type:selectForm.value}
- tasks.push(novaTarefa)
+ tasks.unshift(novaTarefa)
 
 renderElements(tasks)
 })
