@@ -39,6 +39,7 @@ function createTaskItem(task) {
     renderElements(tasks); 
    
   });
+
   
   if(task.type.toLowerCase() === 'Urgente'.toLowerCase()){
     span.classList.add("span-urgent")
@@ -64,6 +65,7 @@ function createTaskItem(task) {
   return li;
 }
 
+
  function novaTarefa(){
   const buttonInput = document.getElementsByClassName("form__button--add-task")[0]
  buttonInput.addEventListener('click',function(event){
@@ -76,41 +78,8 @@ function createTaskItem(task) {
  
  renderElements(tasks)
  })
- }
+}
  novaTarefa()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
